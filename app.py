@@ -11,6 +11,10 @@ app.config.from_object(Config)
 def index():
     return render_template('index.html')
 
+@app.route('/nosotros')
+def nosotros():
+    return render_template('nosotros.html')
+
 @app.route('/services')
 def services():
     return render_template('services.html')
