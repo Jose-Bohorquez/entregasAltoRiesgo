@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    
+    <!-- Mostrar mensajes de error si los hay -->
+    {% if form.errors %}
+        <ul>
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        {% endfor %}
+        </ul>
+    {% endif %}
+    
+    <!-- Mostrar el formulario -->
+    <form method="POST" action="{{ url_for('login') }}">
+        {{ form.hidden_tag() }}  <!-- Campo oculto para CSRF -->
+        <div>
+            {{ form.username.label }}<br>
+            {{ form.username() }}<br>
+        </div>
+        <div>
+            {{ form.password.label }}<br>
+            {{ form.password() }}<br>
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>

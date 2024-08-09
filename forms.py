@@ -1,6 +1,6 @@
 # Importar las clases y funciones necesarias de Flask-WTF y WTForms.
 from flask_wtf import FlaskForm
-from wtforms import StringField, EmailField, TextAreaField, SubmitField
+from wtforms import StringField, PasswordField, EmailField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email
 
 # Definir la clase ContactForm que hereda de FlaskForm.
@@ -27,3 +27,16 @@ class ContactForm(FlaskForm):
     # Utiliza SubmitField para un botón de envío.
     # 'Enviar' es el texto que se muestra en el botón.
     submit = SubmitField('Enviar')
+
+
+# Definir la clase LoginForm que hereda de FlaskForm.
+class LoginForm(FlaskForm):
+    # Campo para el nombre de usuario.
+    username = StringField('Nombre de Usuario', validators=[DataRequired()])
+    
+    # Campo para la contraseña.
+    password = PasswordField('Contraseña', validators=[DataRequired()])
+    
+    # Botón para enviar el formulario.
+    submit = SubmitField('Iniciar Sesión')
+

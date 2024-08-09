@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}entregasAltoRiesgo{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}Mi Aplicación{% endblock %}</title>
+    <!-- Enlazar CSS y JS aquí -->
 </head>
 <body>
     <header>
-        <h1>Mi Aplicación Flask</h1>
         <nav>
-            <a href="/">Inicio</a> |
-            <a href="/services">Servicios</a> |
-            <a href="/contact">Contacto</a>
+            <!-- Navegación básica -->
+            <a href="/">Inicio</a>
+            <a href="/login">login</a>
+            <a href="/logout">salir</a>
+
+            {% if user_role == 'admin' %}
+                <a href="/admin/dashboard">Admin Dashboard</a>
+            {% elif user_role == 'user' %}
+                <a href="/user/profile">Profile</a>
+            {% elif user_role == 'customer' %}
+                <a href="/customer/orders">Orders</a>
+            {% endif %}
         </nav>
     </header>
     <main>
-        {% block content %}{% endblock %}
+        {% block content %}
+        <!-- Contenido específico de cada plantilla -->
+        {% endblock %}
     </main>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <footer>
+        <!-- Información de pie de página -->
+    </footer>
 </body>
 </html>
