@@ -1,0 +1,84 @@
+Instalación y Configuración
+Clonar el Repositorio
+bash
+Copiar código
+git clone <URL_DEL_REPOSITORIO>
+cd miPrimerProyectoConFlask
+Crear y Activar el Entorno Virtual
+En Windows (cmd.exe):
+
+bash
+Copiar código
+python -m venv venv
+venv\Scripts\activate
+En Windows (PowerShell):
+
+bash
+Copiar código
+python -m venv venv
+.\venv\Scripts\Activate
+En Linux/macOS:
+
+bash
+Copiar código
+python3 -m venv venv
+source venv/bin/activate
+Instalar Dependencias
+Con el entorno virtual activado, instala las dependencias:
+
+bash
+Copiar código
+pip install -r requirements.txt
+Ejecutar la Aplicación
+Inicia el servidor de desarrollo de Flask:
+
+bash
+Copiar código
+python app.py
+La aplicación estará disponible en http://127.0.0.1:5000/.
+
+Ejecutar Pruebas
+Para ejecutar las pruebas unitarias:
+
+bash
+Copiar código
+pytest
+Estructura de la Aplicación
+app.py
+El punto de entrada principal de la aplicación Flask. Define las rutas y la configuración de la aplicación.
+
+config.py
+Contiene la configuración de la aplicación, como claves secretas y configuraciones específicas.
+
+controllers/
+Contiene los controladores que manejan la lógica de negocio y las rutas. Cada controlador está diseñado para manejar un conjunto específico de funcionalidades.
+
+models/
+Define los modelos que representan los datos utilizados en la aplicación. Los modelos están diseñados para interactuar con la base de datos o gestionar datos internos.
+
+templates/
+Contiene las plantillas HTML utilizadas por Flask para renderizar las vistas. Usa Jinja2 para inyectar datos dinámicos en las plantillas.
+
+static/
+Archivos estáticos como CSS, JavaScript e imágenes que son servidos directamente al cliente.
+
+tests/
+Contiene pruebas unitarias para asegurar el correcto funcionamiento de la aplicación.
+
+Contribuciones
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+Haz un fork del repositorio.
+Crea una rama nueva (git checkout -b feature/nueva-funcionalidad).
+Realiza tus cambios y haz commit (git commit -am 'Añadir nueva funcionalidad').
+Haz push a la rama (git push origin feature/nueva-funcionalidad).
+Crea una solicitud de extracción (pull request).
+Licencia
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+
+css
+Copiar código
+
+Puedes copiar y pegar este contenido en un archivo llamado `README.md` en tu repositorio. Asegúrate de ajustar la URL del repositorio y cualquier otro detalle específico de tu proyecto. ¡Buena suerte con tu proyecto y su despliegue en GitHub!
+
+
