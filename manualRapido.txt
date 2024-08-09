@@ -1,47 +1,37 @@
 Instalación y Configuración
 Clonar el Repositorio
-bash
-Copiar código
+
 git clone <URL_DEL_REPOSITORIO>
-cd miPrimerProyectoConFlask
+cd <nombreProyecto>
 Crear y Activar el Entorno Virtual
 En Windows (cmd.exe):
-
-bash
-Copiar código
 python -m venv venv
 venv\Scripts\activate
-En Windows (PowerShell):
 
-bash
-Copiar código
+En Windows (PowerShell):
 python -m venv venv
 .\venv\Scripts\Activate
-En Linux/macOS:
 
-bash
-Copiar código
+En Linux/macOS:
 python3 -m venv venv
 source venv/bin/activate
+
+en gitbash
+python -m venv venv
+source venv/Scripts/activate
+
 Instalar Dependencias
 Con el entorno virtual activado, instala las dependencias:
-
-bash
-Copiar código
 pip install -r requirements.txt
 Ejecutar la Aplicación
-Inicia el servidor de desarrollo de Flask:
 
-bash
-Copiar código
+Inicia el servidor de desarrollo de Flask:
 python app.py
 La aplicación estará disponible en http://127.0.0.1:5000/.
 
 Ejecutar Pruebas
-Para ejecutar las pruebas unitarias:
 
-bash
-Copiar código
+Para ejecutar las pruebas unitarias:
 pytest
 Estructura de la Aplicación
 app.py
