@@ -1,8 +1,8 @@
-# Mi Primer Proyecto con Flask
+# entregasAltoRiesgo
 
 ## Descripción
 
-Este es un proyecto web básico construido con Flask, un microframework para Python. La aplicación sigue el patrón de diseño Modelo-Vista-Controlador (MVC) y utiliza `venv` para la gestión del entorno virtual, junto con `pip` para manejar las dependencias.
+Este es un proyecto web básico construido con Flask, un microframework para Python. La aplicación sigue el patrón de diseño Modelo-Vista-Controlador (MVC) y utiliza `venv` para la gestión del entorno virtual, junto con `pip` para manejar las dependencias, elllan es ir implementando funcionalidad y mejoras a medida que vaya avanzando y aprendiendo cosas nuevas
 
 ## Tecnologías Usadas
 
