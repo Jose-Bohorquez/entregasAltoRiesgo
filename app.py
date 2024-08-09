@@ -5,6 +5,10 @@ from config import Config
 # Importar el formulario de contacto desde el archivo forms.py
 from forms import ContactForm
 
+#basicamente esto es un require de php pero en python
+from controllers.user_controller import get_user_info  # Importa la función del controlador
+
+
 # Crear una instancia de la aplicación Flask.
 app = Flask(__name__)
 # Configurar la aplicación utilizando la configuración definida en config.py
@@ -45,6 +49,10 @@ def contact():
     
     # Renderizar la plantilla 'contact.html' y pasar el formulario a la plantilla.
     return render_template('contact.html', form=form)
+
+@app.route('/user')
+def user():
+    return get_user_info()  # Llama a la función del controlador para mostrar la vista
 
 # Ejecutar la aplicación si este archivo es el principal.
 if __name__ == "__main__":
