@@ -1,40 +1,21 @@
-# Python
+# Directorio del entorno virtual
+venv/
+.env/
+
+# Archivos de compilación y caché
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-__pycache__/
-*.db
-*.sqlite3
 
-# Entornos Virtuales
-venv/
-ENV/
-env/
-.venv/
-
-# Archivos de Configuración de Entorno
-.env
-*.env
-
-# Archivos de Configuración del IDE
+# Archivos de configuración de IDE
 .vscode/
 .idea/
 
-# Archivos de Logs
-*.log
+# Archivos sensibles
+config.py
 
-# Archivos del Sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de Compilación
-build/
-dist/
-*.egg-info
-
-# Archivos de Instalación
+# Dependencias
+*.egg-info/
 *.egg
-
-# Otros archivos temporales
-*.tmp
-*.swp
+*.dist-info/

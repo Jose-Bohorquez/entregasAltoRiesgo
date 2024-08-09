@@ -1,4 +1,8 @@
+# config.py
+
+import os
+
 class Config:
-    SECRET_KEY = 'tu_clave_secreta'  # Cambia esto a una clave secreta real
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///miapp.db'
+    SECRET_KEY = os.getenv('SECRET_KEY', 'your_secret_key')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///database.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
