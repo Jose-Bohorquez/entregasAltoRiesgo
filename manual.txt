@@ -1,0 +1,133 @@
+Mini Manual de Despliegue
+1. Entorno Virtual con venv
+Para Crear y Activar el Entorno Virtual venv:
+
+En Windows:
+
+Crear el Entorno Virtual:
+
+bash
+Copiar código
+python -m venv venv
+Activar el Entorno Virtual:
+
+Command Prompt (cmd.exe):
+
+bash
+Copiar código
+venv\Scripts\activate
+PowerShell:
+
+bash
+Copiar código
+.\venv\Scripts\Activate
+En Linux/macOS:
+
+Crear el Entorno Virtual:
+
+bash
+Copiar código
+python3 -m venv venv
+Activar el Entorno Virtual:
+
+bash
+Copiar código
+source venv/bin/activate
+Para Instalar Dependencias:
+
+Con el entorno virtual activado, ejecuta:
+
+bash
+Copiar código
+pip install -r requirements.txt
+2. Entorno Virtual con pipenv
+Para Instalar y Usar pipenv:
+
+Instalar pipenv (si no está instalado):
+
+bash
+Copiar código
+pip install pipenv
+Crear el Entorno Virtual e Instalar Dependencias:
+
+bash
+Copiar código
+pipenv install
+Activar el Entorno Virtual:
+
+bash
+Copiar código
+pipenv shell
+En Windows/Linux/macOS:
+
+El proceso de activación es el mismo (pipenv shell).
+Para Instalar Dependencias desde un Pipfile:
+
+bash
+Copiar código
+pipenv install
+3. Entorno Virtual con poetry
+Para Instalar y Usar poetry:
+
+Instalar poetry (si no está instalado):
+
+bash
+Copiar código
+curl -sSL https://install.python-poetry.org | python3 -
+Crear el Entorno Virtual e Instalar Dependencias:
+
+bash
+Copiar código
+poetry install
+Activar el Entorno Virtual:
+
+bash
+Copiar código
+poetry shell
+En Windows/Linux/macOS:
+
+El proceso de activación es el mismo (poetry shell).
+Para Instalar Dependencias desde un pyproject.toml:
+
+bash
+Copiar código
+poetry install
+Resumen de Comandos para Activar Entornos
+Con venv:
+
+Windows (cmd.exe): venv\Scripts\activate
+Windows (PowerShell): .\venv\Scripts\Activate
+Linux/macOS: source venv/bin/activate
+Con pipenv:
+
+Windows/Linux/macOS: pipenv shell
+Con poetry:
+
+Windows/Linux/macOS: poetry shell
+Pasos Adicionales
+Clonar el Repositorio:
+
+bash
+Copiar código
+git clone <URL_DEL_REPOSITORIO>
+cd nombre-del-repositorio
+Crear y Activar el Entorno Virtual:
+
+Sigue los pasos anteriores según la herramienta que utilices (venv, pipenv, o poetry).
+
+Instalar Dependencias:
+
+Con venv: pip install -r requirements.txt
+Con pipenv: pipenv install
+Con poetry: poetry install
+Ejecutar la Aplicación:
+
+bash
+Copiar código
+python app.py
+Ejecutar Pruebas (Opcional):
+
+bash
+Copiar código
+pytest
+Este manual debería ayudarte a configurar y trabajar en el proyecto en diferentes entornos. Si necesitas más detalles o tienes problemas específicos, avísame. ¡Estoy aquí para ayudarte!
