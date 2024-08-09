@@ -17,8 +17,10 @@ app.config.from_object(Config)
 # Definir la ruta para la página de inicio.
 @app.route('/')
 def index():
-    # Renderizar la plantilla 'index.html' y devolverla como respuesta.
-    return render_template('index.html')
+    # Definir el valor de username aquí. Puede ser estático o dinámico.
+    username = "Jose Bohorquez"  # Puedes cambiar este valor o hacerlo dinámico.
+     # Renderizar la plantilla 'index.html' y devolverla como respuesta.
+    return render_template('index.html', username=username)
 
 # Definir la ruta para la página "Nosotros".
 @app.route('/nosotros')
